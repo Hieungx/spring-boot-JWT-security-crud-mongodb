@@ -46,7 +46,7 @@ public class SendMailHelper {
 
         //Setting the "to recipients"
         msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(MailConstants.FRIEND_EMAIL, false));
-        msg.setSubject("Hiếu Siêu cấp vip pro");
+        msg.setSubject("Message made by Hieungx");
         MimeBodyPart mbp1 = new MimeBodyPart();
         mbp1.setText("Hello " + MailConstants.FRIEND_EMAIL);
         MimeBodyPart mbp2 = new MimeBodyPart();
