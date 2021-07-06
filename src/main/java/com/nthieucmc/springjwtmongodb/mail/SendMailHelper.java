@@ -67,7 +67,7 @@ public class SendMailHelper {
         msg.setSentDate(new java.util.Date());
         Transport.send(msg);
 
-        ValidationResult validationResult = validageMsgNull(msg);
+        ValidationResult validationResult = validateMsgNull(msg);
         if (!validationResult.isSuccessful()) {
             throw new CustomException(validationResult.getCode(), validationResult.getMessage());
         }
@@ -76,7 +76,7 @@ public class SendMailHelper {
         return new BaseResponseDTO(validationResult.getMessage());
     }
 
-    private ValidationResult validageMsgNull(MimeMessage msg) {
+    private ValidationResult validateMsgNull(MimeMessage msg) {
         ValidationResult validationResult = new ValidationResult();
         validationResult.setSuccessful(true);
         if (ObjectUtils.isEmpty(msg)) {
