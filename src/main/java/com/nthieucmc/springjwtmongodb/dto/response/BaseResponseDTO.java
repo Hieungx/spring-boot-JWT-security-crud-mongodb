@@ -19,4 +19,9 @@ public class BaseResponseDTO {
         this.code = code;
         this.message = message;
     }
+
+    public BaseResponseDTO(String message){
+        this.code = ErrorCode.SUCCESS;
+        this.message = message;
+    }
 }
