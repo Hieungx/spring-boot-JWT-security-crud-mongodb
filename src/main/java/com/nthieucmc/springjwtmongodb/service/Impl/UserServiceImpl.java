@@ -11,6 +11,7 @@ import com.nthieucmc.springjwtmongodb.service.UserService;
 import com.nthieucmc.springjwtmongodb.validation.ValidationResult;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
@@ -21,6 +22,9 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     @Resource
+    PasswordEncoder encoder;
+
+    @Resource
     UserRepository userRepository;
 
     @Resource
@@ -29,12 +33,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDTO getByUsername(String username) {
         ValidationResult validationResult = validateUserExisted(username);
-        if (!validationResult.isSuccessful()){
-            throw new CustomException(validationResult.getCode(),validationResult.getMessage());
+        if (!validationResult.isSuccessful()) {
+            throw new CustomException(validationResult.getCode(), validationResult.getMessage());
         }
         User user = userRepository.findUserByUsername(username);
 
-        return userMapper.toDTO(user) ;
+        return userMapper.toDTO(user);
     }
 
     @Override
@@ -45,14 +49,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public BaseResponseDTO editUser(UserDTO userDTO) {
+    public BaseResponseDTO editUser(UserDTO userDTO, String password) {
         ValidationResult validationResult = validateUserExisted(userDTO.getUsername());
-        if(!validationResult.isSuccessful()){
-            throw new CustomException(validationResult.getCode(),validationResult.getMessage());
+        if (!validationResult.isSuccessful()) {
+            throw new CustomException(validationResult.getCode(), validationResult.getMessage());
         }
         User oldUser = userRepository.findUserByUsername(userDTO.getUsername());
-        oldUser.setUsername(userDTO.getUsername());
         oldUser.setEmail(userDTO.getEmail());
+        if (!ObjectUtils.isEmpty(password)) {
+            oldUser.setPassword(encoder.encode(password));
+        }
         userRepository.deleteById(new ObjectId(userDTO.getId()));
         userRepository.save(oldUser);
 
@@ -62,8 +68,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public BaseResponseDTO deleteUserByUsername(String username) {
         ValidationResult validationResult = validateUserExisted(username);
-        if (!validationResult.isSuccessful()){
-            throw new CustomException(validationResult.getCode(),validationResult.getMessage());
+        if (!validationResult.isSuccessful()) {
+            throw new CustomException(validationResult.getCode(), validationResult.getMessage());
         }
         userRepository.delete(userRepository.findUserByUsername(username));
         return new BaseResponseDTO();
@@ -72,8 +78,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public BaseResponseDTO deleteUserById(String Id) {
         ValidationResult validationResult = validateUserExisted(userRepository.findById(new ObjectId(Id)).get().getUsername());
-        if (!validationResult.isSuccessful()){
-            throw new CustomException(validationResult.getCode(),validationResult.getMessage());
+        if (!validationResult.isSuccessful()) {
+            throw new CustomException(validationResult.getCode(), validationResult.getMessage());
         }
         userRepository.deleteById(new ObjectId(Id));
         return new BaseResponseDTO();
@@ -82,7 +88,7 @@ public class UserServiceImpl implements UserService {
     private ValidationResult validateUserExisted(String username) {
         ValidationResult validationResult = new ValidationResult();
         validationResult.setSuccessful(true);
-        if(ObjectUtils.isEmpty(userRepository.findByUsername(username))){
+        if (ObjectUtils.isEmpty(userRepository.findByUsername(username))) {
             validationResult.setSuccessful(false);
             validationResult.setCode(ErrorCode.USER_NOT_FOUND);
             validationResult.setMessage("User not found");

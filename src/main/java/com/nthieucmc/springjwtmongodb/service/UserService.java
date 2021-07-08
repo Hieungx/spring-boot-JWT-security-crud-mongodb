@@ -12,7 +12,7 @@ public interface UserService {
 
     List<UserDTO> getListUser();
 
-    BaseResponseDTO editUser(UserDTO userDTO);
+    BaseResponseDTO editUser(UserDTO userDTO,String password);
 
     BaseResponseDTO deleteUserByUsername(String username);
 

@@ -32,8 +32,9 @@ public class UserController {
 
     @PutMapping("edit-user")
     @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
-    public ResponseEntity<BaseResponseDTO> editUser(@RequestBody UserDTO userDTO){
-        BaseResponseDTO response = userService.editUser(userDTO);
+    public ResponseEntity<BaseResponseDTO> editUser(@RequestBody UserDTO userDTO,
+                                                    @RequestParam(required = false)String password){
+        BaseResponseDTO response = userService.editUser(userDTO,password);
         return ResponseEntity.ok(response);
     }
 
