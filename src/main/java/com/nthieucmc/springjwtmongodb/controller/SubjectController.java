@@ -23,7 +23,7 @@ public class SubjectController {
             @RequestParam(defaultValue = "0") Integer pageNo,
             @RequestParam(defaultValue = "10") Integer pageSize,
             @RequestParam(defaultValue = "subjectCode") String sortBy) {
-        List<SubjectDTO> list = subjectService.getListSubject(pageNo,pageSize,sortBy);
+        List<SubjectDTO> list = subjectService.getListSubject(pageNo, pageSize, sortBy);
         return ResponseEntity.ok(list);
     }
 
@@ -32,5 +32,12 @@ public class SubjectController {
     public ResponseEntity<BaseResponseDTO> createSubject(@RequestBody SubjectDTO subjectDTO) {
         BaseResponseDTO response = subjectService.createSubject(subjectDTO);
         return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/get-by-subjectcode")
+    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+    public ResponseEntity<SubjectDTO> getBySubjectCode(@RequestParam String subjectCode) {
+        SubjectDTO subjectDTO = subjectService.getBySubjectCode(subjectCode);
+        return ResponseEntity.ok(subjectDTO);
     }
 }

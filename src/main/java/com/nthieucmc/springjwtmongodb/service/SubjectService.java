@@ -10,4 +10,6 @@ public interface SubjectService {
     BaseResponseDTO createSubject(SubjectDTO subjectDTO);
 
     List<SubjectDTO> getListSubject(Integer pageNo, Integer pageSize, String sortBy);
+
+    SubjectDTO getBySubjectCode(String subjectCode);
 }

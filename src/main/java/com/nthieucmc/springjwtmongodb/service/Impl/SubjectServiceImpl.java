@@ -43,6 +43,12 @@ public class SubjectServiceImpl implements SubjectService {
         }
     }
 
+    @Override
+    public SubjectDTO getBySubjectCode(String subjectCode) {
+        Subject subject = subjectRepository.findBySubjectCode(subjectCode);
+        return subjectMapper.toDTO(subject);
+    }
+
 
     @Override
     public BaseResponseDTO createSubject(SubjectDTO subjectDTO) {
