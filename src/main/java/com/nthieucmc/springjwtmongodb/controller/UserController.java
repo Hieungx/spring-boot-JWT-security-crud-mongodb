@@ -1,9 +1,8 @@
-package com.nthieucmc.springjwtmongodb.controllers;
+package com.nthieucmc.springjwtmongodb.controller;
 
 import com.nthieucmc.springjwtmongodb.dto.UserDTO;
 import com.nthieucmc.springjwtmongodb.dto.response.BaseResponseDTO;
 import com.nthieucmc.springjwtmongodb.service.UserService;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

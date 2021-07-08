@@ -1,4 +1,4 @@
-package com.nthieucmc.springjwtmongodb.controllers;
+package com.nthieucmc.springjwtmongodb.controller;
 
 import com.nthieucmc.springjwtmongodb.dto.response.BaseResponseDTO;
 import com.nthieucmc.springjwtmongodb.mail.SendMailHelper;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.mail.javamail.JavaMailSender;
 
 import javax.annotation.Resource;
-import javax.mail.internet.MimeMessage;
 
 @Controller
 public class SendMailController {

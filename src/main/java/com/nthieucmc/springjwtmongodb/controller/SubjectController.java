@@ -1,4 +1,4 @@
-package com.nthieucmc.springjwtmongodb.controllers;
+package com.nthieucmc.springjwtmongodb.controller;
 
 import com.nthieucmc.springjwtmongodb.dto.SubjectDTO;
 

@@ -1,4 +1,4 @@
-package com.nthieucmc.springjwtmongodb.controllers;
+package com.nthieucmc.springjwtmongodb.controller;
 
 import java.util.HashSet;
 import java.util.List;
