@@ -20,6 +20,6 @@ public class Subject {
     private String subjectCode;
     @Field(DBKey.SubjectKey.SUBJECT_NAME)
     private String subjectName;
-    @Field(DBKey.SubjectKey.CREDITS)
-    private String credits;
+    @Field(DBKey.SubjectKey.CREDIT)
+    private String credit;
 }

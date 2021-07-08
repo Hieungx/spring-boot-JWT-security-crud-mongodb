@@ -1,7 +1,6 @@
-package com.nthieucmc.springjwtmongodb.controllers;
+package com.nthieucmc.springjwtmongodb.controller;
 
 import com.nthieucmc.springjwtmongodb.dto.UserDTO;
-import com.nthieucmc.springjwtmongodb.dto.response.BaseResponseDTO;
 import com.nthieucmc.springjwtmongodb.service.UserService;
 import com.nthieucmc.springjwtmongodb.utils.UserExcelExporter;
 import org.springframework.stereotype.Controller;
