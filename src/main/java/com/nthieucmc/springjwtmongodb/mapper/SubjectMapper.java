@@ -13,13 +13,13 @@ import java.util.List;
 
 public abstract class SubjectMapper implements BaseMapper<SubjectDTO, Subject> {
     @Override
-/*    @Mapping(source = "id", target = "id", qualifiedByName = "CONVERT_STRING_TO_OBJECT_ID")*/
+//    @Mapping(source = "id", target = "id", qualifiedByName = "CONVERT_STRING_TO_OBJECT_ID")
     @InheritConfiguration
     @Named("subjectToEntity")
     public abstract Subject toEntity(SubjectDTO dto);
 
     @Override
-/*    @Mapping(source = "id", target = "id", qualifiedByName = "CONVERT_OBJECT_ID_TO_STRING")*/
+//    @Mapping(source = "id", target = "id", qualifiedByName = "CONVERT_OBJECT_ID_TO_STRING")
     @InheritConfiguration
     @Named("subjectToDTO")
     public abstract SubjectDTO toDTO(Subject entity);
