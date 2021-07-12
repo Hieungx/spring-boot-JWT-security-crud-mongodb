@@ -1,0 +1,200 @@
+[{
+  "_id": {
+    "$oid": "60e6746f017b18642eab1476"
+  },
+  "subject_code": "CF212",
+  "subject_name": "Cấu trúc dữ liệu",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e67540017b18642eab1477"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6756b017b18642eab1478"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6756c017b18642eab1479"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6756c017b18642eab147a"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6756e017b18642eab147b"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6756f017b18642eab147c"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6756f017b18642eab147d"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e67579017b18642eab147e"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757a017b18642eab147f"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757a017b18642eab1480"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757b017b18642eab1481"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757c017b18642eab1482"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757c017b18642eab1483"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757d017b18642eab1484"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757d017b18642eab1485"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757e017b18642eab1486"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757e017b18642eab1487"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757e017b18642eab1488"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757f017b18642eab1489"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e6757f017b18642eab148a"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e67580017b18642eab148b"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e67580017b18642eab148c"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60e67581017b18642eab148d"
+  },
+  "subject_code": "CF301",
+  "subject_name": "Ngôn ngữ hình thức và Otomat",
+  "credit": "2",
+  "_class": "com.nthieucmc.springjwtmongodb.models.Subject"
+},{
+  "_id": {
+    "$oid": "60ebb57bda71571bc9c4e71a"
+  },
+  "subject_code": "CF123",
+  "subject_name": "Ẩm thực",
+  "credit": "3"
+}]

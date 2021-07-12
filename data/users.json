@@ -1,0 +1,77 @@
+[{
+  "_id": {
+    "$oid": "60e56e9802ae9933dc4fdc9c"
+  },
+  "username": "main",
+  "email": "main@gmail.com",
+  "password": "$2a$10$cHmLjCm7htetXcyZfiT8su26wgJ9TBQrxFr2/zGanhPhWm36lNcaW",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "60e56e020313938910395cd8"
+      }
+    },
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "60e56e020313938910395cd6"
+      }
+    },
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "60e56e020313938910395cd7"
+      }
+    }
+  ],
+  "_class": "com.nthieucmc.springjwtmongodb.models.User"
+},{
+  "_id": {
+    "$oid": "60e56ea502ae9933dc4fdc9d"
+  },
+  "username": "admin",
+  "email": "admin@gmail.com",
+  "password": "$2a$10$pePVBBGCQYfwl6uSmfz69u.EmPNdNxv1wR0K0Y/iB6EWBVvGMHDl.",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "60e56e020313938910395cd8"
+      }
+    }
+  ],
+  "_class": "com.nthieucmc.springjwtmongodb.models.User"
+},{
+  "_id": {
+    "$oid": "60e56eaf02ae9933dc4fdc9e"
+  },
+  "username": "mod",
+  "email": "mod@gmail.com",
+  "password": "$2a$10$PJrKFUTj4G1Jj9cfmEfTC.XKcbtmJ3oXV06xhf.bPhjfaDfvNdaly",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "60e56e020313938910395cd7"
+      }
+    }
+  ],
+  "_class": "com.nthieucmc.springjwtmongodb.models.User"
+},{
+  "_id": {
+    "$oid": "60e56eb802ae9933dc4fdc9f"
+  },
+  "username": "user",
+  "email": "newuser@gmail.com",
+  "password": "$2a$10$OU77nabTTOO5MveJ7OnWSu6.TozVIwkVRxS5CH0To6z0Mc21tu5Ua",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "60e56e020313938910395cd6"
+      }
+    }
+  ],
+  "_class": "com.nthieucmc.springjwtmongodb.models.User"
+}]
