@@ -16,4 +16,11 @@ public class DBKey {
         public static final String DEPARTMENT_NAME = "department_name";
         public static final String DEPARTMENT_LEAD = "department_lead";
     }
+
+    public static final String MAJOR_COLLECTION = "collection";
+    public static class MajorKey {
+        public static final String _ID = "_id";
+        public static final String MAJOR_CODE = "major_code";
+        public static final String MAJOR_NAME = "major_name";
+    }
 }
