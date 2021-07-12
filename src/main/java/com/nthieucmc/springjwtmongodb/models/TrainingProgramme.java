@@ -14,14 +14,14 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "major")
-public class Major {
+@Document(collection = "training_programme")
+public class TrainingProgramme {
     @Id
     private ObjectId id;
+    @Field(DBKey.TrainingProgrammeKey.TRAINING_PROGRAMME_CODE)
+    private String trainingProgrammeCode;
+    @Field(DBKey.TrainingProgrammeKey.TRAINING_PROGRAMME_NAME)
+    private String trainingProgrammeName;
     @Field(DBKey.MajorKey.MAJOR_CODE)
-    private String majorCode;
-    @Field(DBKey.MajorKey.MAJOR_NAME)
-    private String majorName;
-    @Field(DBKey.DepartmentKey.DEPARTMENT_CODE)
-    private List<String> departmentCodes;
+    private List<String> majorCodes;
 }

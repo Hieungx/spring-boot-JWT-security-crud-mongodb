@@ -17,10 +17,17 @@ public class DBKey {
         public static final String DEPARTMENT_LEAD = "department_lead";
     }
 
-    public static final String MAJOR_COLLECTION = "collection";
+    public static final String MAJOR_COLLECTION = "major";
     public static class MajorKey {
         public static final String _ID = "_id";
         public static final String MAJOR_CODE = "major_code";
         public static final String MAJOR_NAME = "major_name";
+    }
+
+    public static final String TRAINING_PROGRAMME_COLLECTION = "training_programme";
+    public static class TrainingProgrammeKey {
+        public static final String _ID = "_id";
+        public static final String TRAINING_PROGRAMME_CODE = "training_programme_code";
+        public static final String TRAINING_PROGRAMME_NAME = "training_programme_name";
     }
 }

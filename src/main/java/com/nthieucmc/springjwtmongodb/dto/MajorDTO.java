@@ -17,5 +17,5 @@ public class MajorDTO {
     @JsonProperty("majorName")
     private String majorName;
     @JsonProperty("departmentCode")
-    private List<Department> departmentCodes;
+    private List<String> departmentCodes;
 }
