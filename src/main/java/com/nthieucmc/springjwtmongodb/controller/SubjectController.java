@@ -3,6 +3,7 @@ package com.nthieucmc.springjwtmongodb.controller;
 import com.nthieucmc.springjwtmongodb.dto.SubjectDTO;
 
 import com.nthieucmc.springjwtmongodb.dto.response.BaseResponseDTO;
+import com.nthieucmc.springjwtmongodb.dto.response.ListResponseDTO;
 import com.nthieucmc.springjwtmongodb.service.SubjectService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -19,11 +20,12 @@ public class SubjectController {
 
     @GetMapping("/get-all-subject")
     @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
-    public ResponseEntity<List<SubjectDTO>> getAllSubject(
-            @RequestParam(defaultValue = "0") Integer pageNo,
-            @RequestParam(defaultValue = "10") Integer pageSize,
-            @RequestParam(defaultValue = "subjectCode") String sortBy) {
-        List<SubjectDTO> list = subjectService.getListSubject(pageNo, pageSize, sortBy);
+    public ResponseEntity<ListResponseDTO<SubjectDTO>> getAllSubject(
+            @RequestParam(required = false, defaultValue = "") List<String> subjectCode,
+            @RequestParam(required = false, defaultValue = "1") Integer pageNo,
+            @RequestParam(required = false, defaultValue = "10") Integer pageSize,
+            @RequestParam(required = false, defaultValue = "-1") String sortBy) {
+        ListResponseDTO<SubjectDTO> list = subjectService.getListSubject(subjectCode,pageNo, pageSize, sortBy);
         return ResponseEntity.ok(list);
     }
 
