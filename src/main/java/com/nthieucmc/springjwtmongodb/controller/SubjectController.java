@@ -42,4 +42,11 @@ public class SubjectController {
         SubjectDTO subjectDTO = subjectService.getBySubjectCode(subjectCode);
         return ResponseEntity.ok(subjectDTO);
     }
+
+    @DeleteMapping("/delete-by-subjectCode")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<BaseResponseDTO> deleteSubject(@RequestParam String subjectCode) {
+        BaseResponseDTO baseResponseDTO = subjectService.deleteSubject(subjectCode);
+        return ResponseEntity.ok(baseResponseDTO);
+    }
 }

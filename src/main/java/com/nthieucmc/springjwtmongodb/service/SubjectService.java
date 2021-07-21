@@ -13,4 +13,6 @@ public interface SubjectService {
     ListResponseDTO<SubjectDTO> getListSubject(List<String> subbjectCode, Integer pageNo, Integer pageSize, String sortBy);
 
     SubjectDTO getBySubjectCode(String subjectCode);
+
+    BaseResponseDTO deleteSubject(String subjectCode);
 }

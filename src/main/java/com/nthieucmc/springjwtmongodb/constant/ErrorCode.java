@@ -15,5 +15,7 @@ public class ErrorCode {
 
     public static final String MESSAGE_NULL = "000006";
 
+    public static final String DELETE_SUBJECT_FAILED = "000007";
+
     public static final String NO_DATA_FOUND_FIRST_STEP = "No data found first step";
 }

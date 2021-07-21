@@ -3,6 +3,8 @@ package com.nthieucmc.springjwtmongodb.repository.Impl;
 import com.mongodb.bulk.BulkWriteResult;
 import com.mongodb.client.result.UpdateResult;
 import com.nthieucmc.springjwtmongodb.constant.DBKey;
+import com.nthieucmc.springjwtmongodb.constant.ErrorCode;
+import com.nthieucmc.springjwtmongodb.dto.response.BaseResponseDTO;
 import com.nthieucmc.springjwtmongodb.models.Subject;
 import com.nthieucmc.springjwtmongodb.repository.SubjectCustomRepository;
 import lombok.RequiredArgsConstructor;
@@ -83,5 +85,17 @@ public class SubjectCustomRepositoryImpl implements SubjectCustomRepository {
 
         List<Subject> result = aggregationResults.getMappedResults();
         return result;
+    }
+
+    @Override
+    public BaseResponseDTO deleteSubject(String subjectCode) {
+        BaseResponseDTO baseResponseDTO = new BaseResponseDTO();
+        Query query = new Query();
+        query.addCriteria(Criteria.where(DBKey.SubjectKey.SUBJECT_CODE).is(subjectCode));
+        mongoTemplate.remove(query, Subject.class);
+        if (findBySubjectCode(subjectCode) != null) {
+            baseResponseDTO.setCode(ErrorCode.DELETE_SUBJECT_FAILED);
+        }
+        return baseResponseDTO;
     }
 }

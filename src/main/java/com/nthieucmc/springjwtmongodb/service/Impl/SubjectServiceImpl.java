@@ -1,11 +1,13 @@
 package com.nthieucmc.springjwtmongodb.service.Impl;
 
 
+import com.nthieucmc.springjwtmongodb.constant.ErrorCode;
 import com.nthieucmc.springjwtmongodb.dto.SubjectDTO;
 import com.nthieucmc.springjwtmongodb.dto.response.BaseResponseDTO;
 
 import com.nthieucmc.springjwtmongodb.dto.response.ListResponseDTO;
 import com.nthieucmc.springjwtmongodb.dto.response.PageDTO;
+import com.nthieucmc.springjwtmongodb.exception.CustomException;
 import com.nthieucmc.springjwtmongodb.mapper.SubjectMapper;
 import com.nthieucmc.springjwtmongodb.models.Subject;
 import com.nthieucmc.springjwtmongodb.repository.SubjectRepository;
@@ -71,6 +73,16 @@ public class SubjectServiceImpl implements SubjectService {
         return subjectMapper.toDTO(subject);
     }
 
+    @Override
+    public BaseResponseDTO deleteSubject(String subjectCode) {
+        ValidationResult validationResult = validateSubjectExisted(subjectCode);
+        if (!validationResult.isSuccessful()) {
+            throw new CustomException(validationResult.getCode(),validationResult.getMessage());
+        }
+        BaseResponseDTO baseResponseDTO = subjectRepository.deleteSubject(subjectCode);
+        return baseResponseDTO;
+    }
+
 
     @Override
     public BaseResponseDTO createSubject(SubjectDTO subjectDTO) {
@@ -83,6 +95,7 @@ public class SubjectServiceImpl implements SubjectService {
         validationResult.setSuccessful(true);
         if (ObjectUtils.isEmpty(subjectRepository.findBySubjectCode(subjectCode))) {
             validationResult.setSuccessful(false);
+            validationResult.setMessage("Subject not found");
         }
         return validationResult;
     }

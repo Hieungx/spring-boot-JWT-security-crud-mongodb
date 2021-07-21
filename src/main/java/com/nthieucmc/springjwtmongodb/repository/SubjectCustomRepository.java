@@ -1,5 +1,6 @@
 package com.nthieucmc.springjwtmongodb.repository;
 
+import com.nthieucmc.springjwtmongodb.dto.response.BaseResponseDTO;
 import com.nthieucmc.springjwtmongodb.models.Subject;
 import org.bson.types.ObjectId;
 
@@ -11,4 +12,6 @@ public interface SubjectCustomRepository {
     List<Subject> querySubjectByFilter(List<String> subjectCode);
 
     List<Subject> getAllSubjectWithFilterPageable(List<ObjectId> listSubjectId, int page, int size, String direction, long totalNumberElement);
+
+    BaseResponseDTO deleteSubject(String subjectCode);
 }
