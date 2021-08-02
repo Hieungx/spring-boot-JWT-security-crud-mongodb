@@ -29,21 +29,21 @@ public class SubjectController {
         return ResponseEntity.ok(list);
     }
 
-    @PostMapping("/create-subject")
+    @PostMapping("/create")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<BaseResponseDTO> createSubject(@RequestBody SubjectDTO subjectDTO) {
         BaseResponseDTO response = subjectService.createSubject(subjectDTO);
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/get-by-subjectcode")
+    @GetMapping("/get-by-code")
     @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity<SubjectDTO> getBySubjectCode(@RequestParam String subjectCode) {
         SubjectDTO subjectDTO = subjectService.getBySubjectCode(subjectCode);
         return ResponseEntity.ok(subjectDTO);
     }
 
-    @DeleteMapping("/delete-by-subjectCode")
+    @DeleteMapping("/delete-by-code")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<BaseResponseDTO> deleteSubject(@RequestParam String subjectCode) {
         BaseResponseDTO baseResponseDTO = subjectService.deleteSubject(subjectCode);
